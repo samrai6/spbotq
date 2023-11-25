@@ -130,11 +130,11 @@ async def who_is(client, message):
 @Client.on_message(filters.command(["imdb", 'search']))
 async def imdb_search(client, message):
     if ' ' in message.text:
-        k = await message.reply('Searching ImDB')
+        k = await message.reply('𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖮𝗇 𝖨𝖬𝖣𝖻...')
         r, title = message.text.split(None, 1)
         movies = await get_poster(title, bulk=True)
         if not movies:
-            return await message.reply("No results Found")
+            return await message.reply("𝗡𝗼 𝗥𝗲𝘀𝘂𝗹𝘁 𝗙𝗼𝘂𝗻𝗱.!")
         btn = [
             [
                 InlineKeyboardButton(
