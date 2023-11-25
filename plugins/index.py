@@ -13,7 +13,6 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 lock = asyncio.Lock()
 
-
 @Client.on_callback_query(filters.regex(r'^index'))
 async def index_files(bot, query):
     if query.data.startswith('index_cancel'):
@@ -47,7 +46,6 @@ async def index_files(bot, query):
     except:
         chat = chat
     await index_files_to_db(int(lst_msg_id), chat, msg, bot)
-
 
 @Client.on_message((filters.forwarded | (filters.regex("(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")) & filters.text ) & filters.private & filters.incoming)
 async def send_for_index(bot, message):
@@ -119,7 +117,6 @@ async def send_for_index(bot, message):
                            reply_markup=reply_markup)
     await message.reply('ThankYou For the Contribution, Wait For My Moderators to verify the files.')
 
-
 @Client.on_message(filters.command('setskip') & filters.user(ADMINS))
 async def set_skip_number(bot, message):
     if ' ' in message.text:
@@ -132,7 +129,6 @@ async def set_skip_number(bot, message):
         temp.CURRENT = int(skip)
     else:
         await message.reply("Give me a skip number")
-
 
 async def index_files_to_db(lst_msg_id, chat, msg, bot):
     total_files = 0

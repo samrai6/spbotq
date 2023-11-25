@@ -1,7 +1,7 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, REQ_CHANNEL
-from imdb import IMDb
+from info import ADMINS, AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, REQ_CHANNEL
+from imdb import Cinemagoer 
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
@@ -13,6 +13,7 @@ from typing import List
 from database.users_chats_db import db
 from bs4 import BeautifulSoup
 import requests
+from database.join_reqs import JoinReqs as db2
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -27,8 +28,7 @@ BANNED = {}
 SMART_OPEN = '“'
 SMART_CLOSE = '”'
 START_CHAR = ('\'', '"', SMART_OPEN)
-
-# temp db for banned 
+ 
 class temp(object):
     BANNED_USERS = []
     BANNED_CHATS = []
@@ -75,7 +75,6 @@ async def is_subscribed(bot, query):
 
 async def get_poster(query, bulk=False, id=False, file=None):
     if not id:
-        # https://t.me/GetTGLink/4183
         query = (query.strip()).lower()
         title = query
         year = re.findall(r'[1-2]\d{3}$', query, re.IGNORECASE)
@@ -151,7 +150,6 @@ async def get_poster(query, bulk=False, id=False, file=None):
         'rating': str(movie.get("rating")),
         'url':f'https://www.imdb.com/title/tt{movieid}'
     }
-# https://github.com/odysseusmax/animated-lamp/blob/2ef4730eb2b5f0596ed6d03e7b05243d93e3415b/bot/utils/broadcast.py#L37
 
 async def broadcast_messages(user_id, message):
     try:
@@ -186,7 +184,6 @@ async def search_gagala(text):
     soup = BeautifulSoup(response.text, 'html.parser')
     titles = soup.find_all( 'h3' )
     return [title.getText() for title in titles]
-
 
 async def get_settings(group_id):
     settings = temp.SETTINGS.get(group_id)
@@ -235,7 +232,6 @@ def get_file_id(msg: Message):
 
 def extract_user(message: Message) -> Union[int, str]:
     """extracts the user from a message"""
-    # https://github.com/SpEcHiDe/PyroGramBot/blob/f30e2cca12002121bad1982f68cd0ff9814ce027/pyrobot/helper_functions/extract_user.py#L7
     user_id = None
     user_first_name = None
     if message.reply_to_message:
@@ -328,7 +324,6 @@ async def broadcast_messages_group(chat_id, message):
     except Exception as e:
         return False, "Error"
 
-
 def split_quotes(text: str) -> List:
     if not any(text.startswith(char) for char in START_CHAR):
         return text.split(None, 1)
@@ -350,7 +345,7 @@ def split_quotes(text: str) -> List:
         key = text[0] + text[0]
     return list(filter(None, [key, rest]))
 
-def parser(text, keyword):
+def gfilterparser(text, keyword):
     if "buttonalert" in text:
         text = (text.replace("\n", "\\n").replace("\t", "\\t"))
     buttons = []
@@ -375,12 +370,12 @@ def parser(text, keyword):
                 if bool(match.group(5)) and buttons:
                     buttons[-1].append(InlineKeyboardButton(
                         text=match.group(2),
-                        callback_data=f"alertmessage:{i}:{keyword}"
+                        callback_data=f"gfilteralert:{i}:{keyword}"
                     ))
                 else:
                     buttons.append([InlineKeyboardButton(
                         text=match.group(2),
-                        callback_data=f"alertmessage:{i}:{keyword}"
+                        callback_data=f"gfilteralert:{i}:{keyword}"
                     )])
                 i += 1
                 alerts.append(match.group(4))
@@ -418,7 +413,6 @@ def remove_escapes(text: str) -> str:
         else:
             res += text[counter]
     return res
-
 
 def humanbytes(size):
     if not size:

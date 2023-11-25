@@ -19,12 +19,10 @@ async def save_group(bot, message):
             await db.add_chat(message.chat.id, message.chat.title)
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
-            buttons = [[
-            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")
-        ]]
+            buttons = [[InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
-                text='<b>CHAT NOT ALLOWED 🐞\n\nMy admins has restricted me from working here ! If you want to know more about it contact support..</b>',
+                text='𝗧𝗵𝗶𝘀 𝗖𝗵𝗮𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗔𝗹𝗹𝗼𝘄𝗱𝗲𝗱.!\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖬𝗒 𝖬𝖺𝗌𝗍𝖾𝗋.',
                 reply_markup=reply_markup,
             )
 
@@ -40,7 +38,7 @@ async def save_group(bot, message):
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
+            text=f"𝗧𝗵𝗮𝗻𝗸𝘀 𝗙𝗼𝗿 𝗔𝗱𝗱𝗶𝗻𝗴 𝗠𝗲 𝗜𝗻 {message.chat.title} ❣️\n𝖨𝖿 𝖸𝗈𝗎 𝖧𝖺𝗏𝖾 𝖠𝗇𝗒 𝖣𝗈𝗎𝖻𝗍𝗌, 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖲𝗎𝗉𝗉𝗈𝗋𝗍.!",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -51,8 +49,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾 , {u.mention}, 𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>")
-
+                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>\n\n<a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>")
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -64,12 +61,11 @@ async def leave_a_chat(bot, message):
     except:
         chat = chat
     try:
-        buttons = [[InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")
-        ]]
+        buttons = [[InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b>',
+            text='𝗧𝗵𝗶𝘀 𝗖𝗵𝗮𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗔𝗹𝗹𝗼𝘄𝗱𝗲𝗱.!\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖬𝗒 𝖬𝖺𝗌𝗍𝖾𝗋.',
             reply_markup=reply_markup,
         )
 
@@ -103,17 +99,16 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b> \nReason : <code>{reason}</code>',
+            text=f'𝗧𝗵𝗶𝘀 𝗖𝗵𝗮𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗔𝗹𝗹𝗼𝘄𝗱𝗲𝗱.!\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖬𝗒 𝖬𝖺𝗌𝗍𝖾𝗋.\n\nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
         await message.reply(f"Error - {e}")
-
 
 @Client.on_message(filters.command('enable') & filters.user(ADMINS))
 async def re_enable_chat(bot, message):
@@ -133,7 +128,6 @@ async def re_enable_chat(bot, message):
     temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
 
-
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
     rju = await message.reply('Fetching stats..')
@@ -141,15 +135,12 @@ async def get_ststs(bot, message):
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
     size = await db.get_db_size()
-    free = 536870912 - size
+    free = 512000000 - size
     size = get_size(size)
     free = get_size(free)
     await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
 
-
-# a function for trespassing into others groups, Inspired by a Vazha
-# Not to be used , But Just to showcase his vazhatharam.
-# @Client.on_message(filters.command('invite') & filters.user(ADMINS))
+@Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
     if len(message.command) == 1:
         return await message.reply('Give me a chat id')
@@ -168,7 +159,6 @@ async def gen_invite(bot, message):
 
 @Client.on_message(filters.command('ban') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/GetTGLink/4185
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -197,8 +187,6 @@ async def ban_a_user(bot, message):
         await db.ban_user(k.id, reason)
         temp.BANNED_USERS.append(k.id)
         await message.reply(f"Successfully banned {k.mention}")
-
-
     
 @Client.on_message(filters.command('unban') & filters.user(ADMINS))
 async def unban_a_user(bot, message):
@@ -230,12 +218,9 @@ async def unban_a_user(bot, message):
         await db.remove_ban(k.id)
         temp.BANNED_USERS.remove(k.id)
         await message.reply(f"Successfully unbanned {k.mention}")
-
-
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/GetTGLink/4184
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
