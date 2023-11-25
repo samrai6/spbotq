@@ -14,7 +14,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '9149961'))
 API_HASH = environ.get('API_HASH', 'de667e7f26d7c58df684bfeb6189f1fd')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5911035115:AAGLaRZSk2yQqi5HvYQA9pHWPOwSM_Iz2tQ')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5850407869:AAGEL3TsfA3i3tf7X3gUtZ9WOp3-Ny3e-q4')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -29,12 +29,12 @@ SUPPORT_CHAT_ID = -1001792675255
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = -1002050049881
 REQ_CHANNEL = -1002050049881
-JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://rai:rai@cluster0.zgit5sy.mongodb.net/?retryWrites=true&w=majority')
+JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://adv:adv@cluster0.txud8.mongodb.net/?retryWrites=true&w=majority')
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Rajappan")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://adv:adv@cluster0.txud8.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001853961538').split()]
