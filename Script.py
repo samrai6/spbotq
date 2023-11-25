@@ -68,4 +68,5 @@ We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
 If anything is against law please contact us so that it can be removed asap.</blockquote>"""
 
-    RESTART_TXT = """<b><u>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 ✅</u></b>"""
+    RESTART_TXT = """
+<b><u>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 ✅</u></b>"""
