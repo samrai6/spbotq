@@ -68,4 +68,4 @@ We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
 If anything is against law please contact us so that it can be removed asap.</blockquote>"""
 
-    RESTART_TXT = """<b>{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 {me.username}.</b>"""
+    RESTART_TXT = """<b><u>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 ✅</u></b>"""
