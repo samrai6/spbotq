@@ -63,6 +63,15 @@ DMCA_TXT = """
 This bot is indexing files which are already uploaded on Telegram for ease of searching,
 We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
-If anything is against law please contact us so that it can be removed asap.</blockquote>
+If anything is against law please contact us so that it can be removed asap.</blockquote>"""
 
-"""
+RESTART_TXT = """
+<b>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 !</b>
+
+📅 𝖣𝖺𝗍𝖾 : <code>{}</code>
+⏰ 𝖳𝗂𝗆𝖾 : <code>{}</code>
+🌐 𝖳𝗂𝗆𝖾𝗓𝗈𝗇𝖾 : <code>Asia/Kolkata</code>
+🛠️ 𝖡𝗎𝗂𝗅𝖽 𝖲𝗍𝖺𝗍𝗎𝗌 : <code>𝗏2.7.3 [𝖲𝗍𝖺𝖻𝗅𝖾]</code></b>"""
+
+    RESTART_GC_TXT = """
+<b><u>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 ✅</u></b>"""
