@@ -31,12 +31,13 @@ For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below."""
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a>"""
 
-    SOURCE_TXT = """<b>NOTE:</b>
+    SOURCE_TXT = """𝗡𝗢𝗧𝗘:
+⚠️ 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍 𝖨𝗌 𝖭𝗈𝗍 𝖠𝗇 𝖮𝗉𝖾𝗇 𝖲𝗈𝗎𝗋𝖼𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍.!
+
 𝖲𝗉𝖾𝖼𝗂𝖺𝗅 𝖳𝗁𝖺𝗇𝗄𝗌 𝗍𝗈 𝖤𝗏𝖺𝖬𝖺𝗋𝗂𝖺 𝖣𝖾𝗏𝗌 𝖥𝗈𝗋 𝖳𝗁𝖾 𝖡𝖺𝗌𝖾 𝖢𝗈𝖽𝖾𝗌.
 
-<b>𝖱𝖾𝖿𝖾𝗋𝖾𝗇𝖼𝖾 𝖱𝖾𝗉𝗈</b>
-
-https://github.com/ritheshrkrm/PiroAutoFilterBot"""
+𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>
+"""
 
     STATUS_TXT = """🗂 Total Files: <code>{}</code>
 👤 Total Users: <code>{}</code>
