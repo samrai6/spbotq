@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎</b>
+    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎</b>💛
 I'm Powerful Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group... 
 
 <blockquote>𝗝𝘂𝘀𝘁 𝗦𝗲𝗻𝗱 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲/𝗦𝗲𝗿𝗶𝗲𝘀 𝗡𝗮𝗺𝗲 𝗪𝗶𝘁𝗵𝗼𝘂𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 𝗠𝗶𝘀𝘁𝗮𝗸𝗲𝘀.
@@ -8,11 +8,12 @@ I'm Powerful Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group...
 
 For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below."""
 
-    HELP_TXT = """𝗛𝗲𝘆 𝗧𝗵𝗲𝗿𝗲,
+    HELP_TXT = """🔖 𝗛𝗲𝘆 𝗧𝗵𝗲𝗿𝗲,
     
 𝖨𝗍'𝗌 𝖭𝗈𝗍 𝖧𝖺𝗋𝖽 𝖳𝗈 𝖴𝗌𝖾 𝖬𝖾,
 
 𝖢𝗁𝖾𝖼𝗄 𝖬𝗈𝗏𝗂𝖾 𝖭𝖺𝗆𝖾 𝖮𝗇 𝖦𝗈𝗈𝗀𝗅𝖾 & 𝖲𝖾𝗇𝖽 𝖳𝗈 𝖬𝖾.
+
 [𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖠𝗇𝗒 𝖲𝗒𝗆𝖻𝗈𝗅 : ; & 𝖾𝗍𝖼]
 
 <blockquote>
@@ -65,13 +66,5 @@ We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
 If anything is against law please contact us so that it can be removed asap.</blockquote>"""
 
-RESTART_TXT = """
-<b>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 !</b>
-
-📅 𝖣𝖺𝗍𝖾 : <code>{}</code>
-⏰ 𝖳𝗂𝗆𝖾 : <code>{}</code>
-🌐 𝖳𝗂𝗆𝖾𝗓𝗈𝗇𝖾 : <code>Asia/Kolkata</code>
-🛠️ 𝖡𝗎𝗂𝗅𝖽 𝖲𝗍𝖺𝗍𝗎𝗌 : <code>𝗏2.7.3 [𝖲𝗍𝖺𝖻𝗅𝖾]</code></b>"""
-
-    RESTART_GC_TXT = """
+    RESTART_TXT = """
 <b><u>𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 ✅</u></b>"""
