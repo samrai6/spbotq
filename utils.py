@@ -30,6 +30,7 @@ SMART_CLOSE = '”'
 START_CHAR = ('\'', '"', SMART_OPEN)
  
 class temp(object):
+    START_TIME = 0
     BANNED_USERS = []
     BANNED_CHATS = []
     ME = None
