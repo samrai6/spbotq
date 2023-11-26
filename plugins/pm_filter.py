@@ -538,7 +538,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         size = get_size(size)
         free = get_size(free)
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.STATUS_TXT.format(files, users, chats, monsize, free, uptime),
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
@@ -559,7 +559,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         size = get_size(size)
         free = get_size(free)
         await query.message.edit_text(
-            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            text=script.STATUS_TXT.format(files, users, chats, monsize, free, uptime),
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
