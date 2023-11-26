@@ -353,7 +353,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         grp_id = query.message.chat.id
         i = query.data.split(":")[1]
         keyword = query.data.split(":")[2]
-        reply_text, btn, alerts, fileid = await find_filter(grp_id, keyword)
+        reply_text, btn, alerts, fileid = await find_gfilter(grp_id, keyword)
         if alerts is not None:
             alerts = ast.literal_eval(alerts)
             alert = alerts[int(i)]
@@ -796,7 +796,7 @@ async def global_filters(client, message, text=False):
     for keyword in reversed(sorted(keywords, key=len)):
         pattern = r"( |^|[^\w])" + re.escape(keyword) + r"( |$|[^\w])"
         if re.search(pattern, name, flags=re.IGNORECASE):
-            reply_text, btn, alert, fileid = await find_filter(gfilters, keyword)
+            reply_text, btn, alert, fileid = await find_gfilter(gfilters, keyword)
 
             if reply_text:
                 reply_text = reply_text.replace("\\n", "\n").replace("\\t", "\t")
