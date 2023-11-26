@@ -91,12 +91,10 @@ async def next_page(bot, query):
     #         for file in files
     #     ]
 
-    btn.insert(0, 
-        [
+    btn = [[
             InlineKeyboardButton(f'📝 𝖭𝗈𝗍𝖾:', 'note'),
             InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{req}#{key}#{pre}")
-        ]
-    )
+        ]]
 
     if 0 < offset <= 10:
         off_set = 0
@@ -669,10 +667,10 @@ async def auto_filter(client, msg, spoll=False):
     #         for file in files
     #     ]
 
-    btn = [
+    btn = [[
             InlineKeyboardButton(f'📝 𝖭𝗈𝗍𝖾:', 'note'),
             InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{req}#{key}#{pre}")
-        ]
+        ]]
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
