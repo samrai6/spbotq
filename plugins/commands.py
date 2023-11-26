@@ -232,21 +232,21 @@ async def settings(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    'Spell Check',
+                    '✍🏻 𝖲𝗉𝖾𝗅𝗅 𝖢𝗁𝖾𝖼𝗄',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["spell_check"] else '❌ No',
+                    '✅ 𝖸𝖾𝗌' if settings["spell_check"] else '❌ 𝖭𝗈',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'Welcome',
+                    '🍾 𝖶𝖾𝗅𝖼𝗈𝗆𝖾',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["welcome"] else '❌ No',
+                    '✅ 𝖸𝖾𝗌' if settings["welcome"] else '❌ 𝖭𝗈',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
             ],
