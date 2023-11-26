@@ -61,6 +61,7 @@ async def next_page(bot, query):
     if not files:
         return
     settings = await get_settings(query.message.chat.id)
+    temp.FILES_IDS[key] = files
 
     text = ""
     for file in files:
@@ -568,6 +569,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
         )
+
+    elif query.data.startswith("send_all"):
+        _, req, key, pre = query.data.split("#")
+        if int(req) not in [query.from_user.id, 0]:
+            return await query.answer('𝖸𝗈𝗎 𝖺𝗋𝖾 𝗎𝗌𝗂𝗇𝗀 𝗈𝗇𝖾 𝗈𝖿 𝗆𝗒 𝗈𝗅𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝖺𝗀𝖺𝗂𝗇.', show_alert=True)
+        
+        await query.answer(url=f"https://t.me/{temp.U_NAME}?start=all_{key}_{pre}")
+
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
