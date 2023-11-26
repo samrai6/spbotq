@@ -140,7 +140,7 @@ async def re_enable_chat(bot, message):
     temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
 
-@Client.on_message(filters.command('stats') & filters.user(ADMINS))
+@Client.on_message(filters.command('stats'))
 async def stats(bot, update):
     msg = await message.reply('👀')
     files = await Media.count_documents()
