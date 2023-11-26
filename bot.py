@@ -52,6 +52,7 @@ class Bot(Client):
         logging.info(LOG_STR)
         try:
             await self.send_message(chat_id=LOG_CHANNEL, text=f"<b>{me.mention} Restarted! 🤖</b>")
+            exit()
 
     async def stop(self, *args):
         await super().stop()
