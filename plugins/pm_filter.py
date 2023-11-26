@@ -93,7 +93,7 @@ async def next_page(bot, query):
     btn.insert(0, 
         [
             InlineKeyboardButton(f'📝 𝖭𝗈𝗍𝖾:', 'note'),
-            InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{key}")
+            InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{req}#{key}#{pre}")
         ]
     )
 
@@ -660,7 +660,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn = [
             InlineKeyboardButton(f'📝 𝖭𝗈𝗍𝖾:', 'note'),
-            InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{key}")
+            InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{req}#{key}#{pre}")
         ]
 
     if offset != "":
