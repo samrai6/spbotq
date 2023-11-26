@@ -4,7 +4,7 @@ from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInv
 from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
 from database.users_chats_db import db
 from database.ia_filterdb import Media
-from utils import get_size, temp, get_settings
+from utils import get_size, temp, get_settings, get_readable_time
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 
@@ -128,17 +128,18 @@ async def re_enable_chat(bot, message):
     temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
 
-@Client.on_message(filters.command('stats') & filters.incoming)
-async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
-    total_users = await db.total_users_count()
-    totl_chats = await db.total_chat_count()
+@Client.on_message(filters.command('stats') & filters.user(ADMINS))
+async def stats(bot, message):
+    msg = await message.reply('𝖫𝗈𝖺𝖽𝗂𝗇𝗀...')
     files = await Media.count_documents()
+    users = await db.total_users_count()
+    chats = await db.total_chat_count()
     size = await db.get_db_size()
-    free = 512000000 - size
+    free = 536870912 - size
+    uptime = get_readable_time(time.time() - temp.START_TIME)
     size = get_size(size)
     free = get_size(free)
-    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    await msg.edit(script.STATUS_TXT.format(files, users, chats, size, free, uptime))
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):

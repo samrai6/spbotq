@@ -33,6 +33,15 @@ class Bot(Client):
         temp.BANNED_USERS = b_users
         temp.BANNED_CHATS = b_chats
         await super().start()
+        if os.path.exists('restart.txt'):
+            with open("restart.txt") as file:
+                chat_id, msg_id = map(int, file)
+            try:
+                await self.edit_message_text(chat_id=chat_id, message_id=msg_id, text='𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 !')
+            except:
+                pass
+            os.remove('restart.txt')
+        temp.BOT = self
         await Media.ensure_indexes()
         me = await self.get_me()
         temp.ME = me.id
@@ -41,6 +50,8 @@ class Bot(Client):
         self.username = '@' + me.username
         logging.info(f"{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 {me.username}.")
         logging.info(LOG_STR)
+        try:
+            await self.send_message(chat_id=LOG_CHANNEL, text=f"<b>{me.mention} Restarted! 🤖</b>")
 
     async def stop(self, *args):
         await super().stop()
