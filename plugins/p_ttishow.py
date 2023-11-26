@@ -131,7 +131,7 @@ async def re_enable_chat(bot, message):
     await message.reply("Chat Successfully re-enabled")
 
 @Client.on_message(filters.command('stats') & filters.user(ADMINS))
-async def stats(bot, message):
+async def stats(bot, update):
     msg = await message.reply('𝖫𝗈𝖺𝖽𝗂𝗇𝗀...')
     files = await Media.count_documents()
     users = await db.total_users_count()
