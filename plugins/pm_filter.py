@@ -61,6 +61,7 @@ async def next_page(bot, query):
     if not files:
         return
     settings = await get_settings(query.message.chat.id)
+    pre = 'filep' if settings['file_secure'] else 'file'
     temp.FILES_IDS[key] = files
 
     text = ""
@@ -629,6 +630,12 @@ async def auto_filter(client, msg, spoll=False):
             return
     else:
         settings = await get_settings(msg.message.chat.id)
+
+    key = f"{message.chat.id}-{message.id}"
+    temp.FILES_IDS[key] = files
+    pre = 'filep' if settings['file_secure'] else 'file'
+    req = message.from_user.id if message.from_user else 0
+    BUTTONS[key] = search
     
     text = ""
     for file in files:
