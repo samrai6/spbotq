@@ -51,7 +51,17 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>\n\n<a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>")
+                temp.MELCOW['welcome'] = await message.reply(
+                    caption=f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>",
+                    reply_markup=InlineKeyboardMarkup([[
+                        InlineKeyboardButton('📚 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅', url=f"https://t.me/piro_tuts"),
+                        InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")]]
+                        ),
+                        parse_mode=enums.ParseMode.HTML
+                        )
+
+        await asyncio.sleep(600)
+        await (temp.MELCOW['welcome']).delete()
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -132,7 +142,7 @@ async def re_enable_chat(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.user(ADMINS))
 async def stats(bot, update):
-    msg = await message.reply('𝖫𝗈𝖺𝖽𝗂𝗇𝗀...')
+    msg = await message.reply('👀')
     files = await Media.count_documents()
     users = await db.total_users_count()
     chats = await db.total_chat_count()
@@ -168,7 +178,7 @@ async def stats(bot, update):
 
 <b>😎 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>"""
 
-    msg = await bot.send_message(chat_id=update.chat.id, text="__𝖯𝗋𝗈𝖼𝖾𝗌𝗌𝗂𝗇𝗀...__", parse_mode=enums.ParseMode.MARKDOWN)         
+    msg = await bot.send_message(chat_id=update.chat.id, text="👀", parse_mode=enums.ParseMode.MARKDOWN)         
     await msg.edit_text(text=ms_g, parse_mode=enums.ParseMode.HTML,disable_web_page_preview=True)
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
