@@ -140,8 +140,12 @@ async def stats(bot, message):
     uptime = get_readable_time(time.time() - temp.START_TIME)
     size = get_size(size)
     free = get_size(free)
-    await msg.edit(script.STATUS_TXT.format(files, users, chats, size, free, uptime)
-    disable_web_page_preview=True)
+    await query.message.edit_text(
+            text=script.STATUS_TXT.format(total, users, chats, monsize, free),
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            parse_mode=enums.ParseMode.HTML
+    )
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
