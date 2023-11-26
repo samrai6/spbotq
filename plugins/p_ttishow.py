@@ -8,6 +8,7 @@ from utils import get_size, temp, get_settings, get_readable_time
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 import re, asyncio, time, shutil, psutil, os, sys
+from utils import humanbytes
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
