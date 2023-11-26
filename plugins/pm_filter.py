@@ -728,9 +728,9 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn),disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML)
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn),disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML)
+            await message.reply_text(text, reply_markup=InlineKeyboardMarkup(btn),disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML)
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn),disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML)
+        await message.reply_text(cap+"\n\n"+text, reply_markup=InlineKeyboardMarkup(btn),disable_web_page_preview=True, parse_mode=enums.ParseMode.HTML)
     if spoll:
         await msg.message.delete()
 
