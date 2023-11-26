@@ -146,7 +146,7 @@ async def stats(bot, message):
     disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command("status"))          
+@Client.on_message(filters.command("status") & filters.user(ADMINS))          
 async def stats(bot, update):
     currentTime = get_readable_time(time.time() - temp.START_TIME)
     total, used, free = shutil.disk_usage(".")
