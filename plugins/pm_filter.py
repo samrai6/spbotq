@@ -13,7 +13,7 @@ from info import ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, P_TTI_SHOW_OFF, IMDB
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait, UserIsBlocked, MessageNotModified, PeerIdInvalid
-from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, send_all
+from utils import get_size, is_subscribed, get_poster, search_gagala, temp, get_settings, save_group_settings, send_all, get_readable_time
 from database.users_chats_db import db
 from database.ia_filterdb import Media, get_file_details, get_search_results
 from database.gfilters_mdb import (
@@ -507,6 +507,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "source":
@@ -517,6 +518,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.SOURCE_TXT,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "dmca":
@@ -527,6 +529,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.DMCA_TXT,
             reply_markup=reply_markup,
+            disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "stats":

@@ -59,12 +59,11 @@ ID - <code>{}</code>
 Name - {}
 """
 
-DMCA_TXT = """
-📯 𝗗𝗶𝘀𝗰𝗹𝗮𝗶𝗺𝗲𝗿:
+DMCA_TXT = """📯 𝗗𝗶𝘀𝗰𝗹𝗮𝗶𝗺𝗲𝗿:
 
-<blockquote>All the files in this bot are freely available on the internet or posted by somebody else.
+<q>All the files in this bot are freely available on the internet or posted by somebody else.
 
 This bot is indexing files which are already uploaded on Telegram for ease of searching,
 We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
-If anything is against law please contact us so that it can be removed asap.</blockquote>"""
+If anything is against law please contact us so that it can be removed asap.</q>"""
