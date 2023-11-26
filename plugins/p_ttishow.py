@@ -136,11 +136,12 @@ async def stats(bot, message):
     users = await db.total_users_count()
     chats = await db.total_chat_count()
     size = await db.get_db_size()
-    free = 536870912 - size
+    free = 5312000000 - size
     uptime = get_readable_time(time.time() - temp.START_TIME)
     size = get_size(size)
     free = get_size(free)
-    await msg.edit(script.STATUS_TXT.format(files, users, chats, size, free, uptime))
+    await msg.edit(script.STATUS_TXT.format(files, users, chats, size, free, uptime)
+    disable_web_page_preview=True)
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
