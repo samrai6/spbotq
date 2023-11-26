@@ -141,7 +141,7 @@ async def stats(bot, message):
     size = get_size(size)
     free = get_size(free)
     await msg.edit(
-            text=script.STATUS_TXT.format(files, users, chats, monsize, free, uptime),
+            text=script.STATUS_TXT.format(files, users, chats, size, free, uptime),
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
