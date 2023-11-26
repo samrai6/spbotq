@@ -23,7 +23,6 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '761686219 5705117542').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001641612683 -1001614484361 -1001838316522').split()]
-SUPPORT_CHAT_ID = -1001792675255
 
 #request channel infor
 auth_channel = environ.get('AUTH_CHANNEL')

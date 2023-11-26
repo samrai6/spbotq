@@ -1,12 +1,11 @@
 class script(object):
     START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎</b> 💛
+
 I'm Powerful Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group... 
 
-<q>𝗝𝘂𝘀𝘁 𝗦𝗲𝗻𝗱 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲/𝗦𝗲𝗿𝗶𝗲𝘀 𝗡𝗮𝗺𝗲 𝗪𝗶𝘁𝗵𝗼𝘂𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 𝗠𝗶𝘀𝘁𝗮𝗸𝗲𝘀.
-𝗜 𝗪𝗶𝗹𝗹 𝗦𝗲𝗻𝗱 𝗙𝗶𝗹𝗲𝘀 𝗧𝗼 𝗬𝗼𝘂.
-[𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖠𝗇𝗒 𝖲𝗒𝗆𝖻𝗈𝗅 : ; & 𝖾𝗍𝖼]</q>
+For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below.
 
-For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below."""
+𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>"""
 
     HELP_TXT = """🔖 𝗛𝗲𝘆 𝗧𝗵𝗲𝗿𝗲,
     
@@ -26,9 +25,13 @@ For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below."""
 <a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>"""
 
     ABOUT_TXT = """<b>○ 𝖬𝗒 𝖭𝖺𝗆𝖾: {}
+
 ○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>
+
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
+
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
+
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a>"""
 
     SOURCE_TXT = """𝗡𝗢𝗧𝗘:
@@ -67,3 +70,7 @@ This bot is indexing files which are already uploaded on Telegram for ease of se
 We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
 If anything is against law please contact us so that it can be removed asap.</q>"""
+
+#𝗝𝘂𝘀𝘁 𝗦𝗲𝗻𝗱 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲/𝗦𝗲𝗿𝗶𝗲𝘀 𝗡𝗮𝗺𝗲 𝗪𝗶𝘁𝗵𝗼𝘂𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 𝗠𝗶𝘀𝘁𝗮𝗸𝗲𝘀.
+#𝗜 𝗪𝗶𝗹𝗹 𝗦𝗲𝗻𝗱 𝗙𝗶𝗹𝗲𝘀 𝗧𝗼 𝗬𝗼𝘂.
+#[𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖠𝗇𝗒 𝖲𝗒𝗆𝖻𝗈𝗅 : ; & 𝖾𝗍𝖼]

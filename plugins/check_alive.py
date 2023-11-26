@@ -13,7 +13,7 @@ async def check_alive(_, message):
 
 @Client.on_message(filters.command("tutorial", CMD))
 async def tutorial(_, message):
-    await message.reply_text("𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 @piro_tuts 𝖥𝗈𝗋 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅𝗌 😎")
+    await message.reply_text(f"<a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>", disable_web_page_preview=True)
 
 @Client.on_message(filters.command("ping", CMD))
 async def ping(_, message):
