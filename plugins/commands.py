@@ -79,6 +79,7 @@ async def start(client, message):
         )
         return
 
+    data = message.command[1]
     try:
         file_id = message.text.split("_", 1)[1]
     except: return
