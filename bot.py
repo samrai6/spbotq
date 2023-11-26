@@ -14,6 +14,7 @@ from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, SUPPORT_CHAT_ID,
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
+import time, os
 
 class Bot(Client):
 
