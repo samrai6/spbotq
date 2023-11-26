@@ -23,9 +23,10 @@ async def ping(_, message):
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"𝖯𝗂𝗇𝗀!\n{time_taken_s:.3f} ms")
 
-@Client.on_message(filters.command('restart') & filters.user(ADMINS))
-async def restart_bot(bot, message):
-    msg = await message.reply("📊")
-    with open('restart.txt', 'w+') as file:
-        file.write(f"{msg.chat.id}\n{msg.id}")
-    os.execl(sys.executable, sys.executable, "bot.py")
+@Client.on_message(filters.command("restart") & filters.user(ADMINS))
+async def stop_button(bot, message):
+    msg = await bot.send_message(text="📊", chat_id=message.chat.id)       
+    await asyncio.sleep(3)
+    await msg.edit("𝖡𝗈𝗍 𝖱𝖾𝗌𝗍𝖺𝗋𝗍𝖾𝖽 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 🧬")
+    os.execl(sys.executable, sys.executable, *sys.argv)
+
