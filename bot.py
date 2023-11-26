@@ -50,9 +50,6 @@ class Bot(Client):
         self.username = '@' + me.username
         logging.info(f"{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 {me.username}.")
         logging.info(LOG_STR)
-        try:
-            await self.send_message(chat_id=LOG_CHANNEL, text=f"<b>{me.mention} Restarted! 🤖</b>")
-            exit()
 
     async def stop(self, *args):
         await super().stop()
