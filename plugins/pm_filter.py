@@ -91,11 +91,6 @@ async def next_page(bot, query):
     #         for file in files
     #     ]
 
-    btn = [[
-            InlineKeyboardButton(f'📝 𝖭𝗈𝗍𝖾', 'note'),
-            InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{req}#{key}#{pre}")
-        ]]
-
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -462,9 +457,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             else:
                 await query.message.edit_text(f"<b>Process Completed for file deletion !\n\nSuccessfully deleted {str(deleted)} files from database for your query {keyword}.</b>")
 
-    elif query.data == 'note':
-        await query.answer("𝗥𝗲𝗾𝘂𝗲𝘀𝘁𝘀 𝗙𝗼𝗿𝗺𝗮𝘁𝘀\n\n• 𝖲𝗈𝗅𝗈 2017\n• 𝖣𝗁𝗈𝗈𝗆 3 𝖧𝗂𝗇𝖽𝗂\n• 𝖪𝗎𝗋𝗎𝗉 𝖪𝖺𝗇𝗇𝖺𝖽𝖺\n• 𝖣𝖺𝗋𝗄 𝗌01\n• 𝖲𝗁𝖾 𝖧𝗎𝗅𝗄 720𝗉\n• 𝖥𝗋𝗂𝖾𝗇𝖽𝗌 𝗌03 1080𝗉\n\n‼️𝗗𝗼𝗻𝘁 𝗮𝗱𝗱 𝘄𝗼𝗿𝗱𝘀 & 𝘀𝘆𝗺𝗯𝗼𝗹𝘀  , . - 𝗹𝗶𝗸𝗲 send link movie series 𝗲𝘁𝗰‼️", True)
-    
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
@@ -666,11 +658,6 @@ async def auto_filter(client, msg, spoll=False):
     #         ]
     #         for file in files
     #     ]
-
-    btn = [[
-            InlineKeyboardButton(f'📝 𝖭𝗈𝗍𝖾', 'note'),
-            InlineKeyboardButton("🗂 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅", callback_data=f"send_all#{req}#{key}#{pre}")
-        ]]
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
