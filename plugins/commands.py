@@ -117,7 +117,7 @@ async def start(client, message):
                 caption=f_caption,
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url=f"https://t.me/piroxbots") ] ] ))
-            ok = await f.reply(DELETE_TXT)
+    ok = await f.reply(DELETE_TXT)
     await asyncio.sleep(300)
     await f.delete()
     await ok.delete()
