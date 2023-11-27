@@ -35,7 +35,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('📚 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅', url=f"https://t.me/piro_tuts"),
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f"https://t.me/raixchat"),
             InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
@@ -56,12 +56,9 @@ async def save_group(bot, message):
                     reply_markup=InlineKeyboardMarkup([[
                         InlineKeyboardButton('📚 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅', url=f"https://t.me/piro_tuts"),
                         InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")]]
-                        ),
-                        parse_mode=enums.ParseMode.HTML
-                        )
-
-        await asyncio.sleep(600)
-        await (temp.MELCOW['welcome']).delete()
+                        ))
+                        await asyncio.sleep(600)
+                        await (temp.MELCOW['welcome']).delete()
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
