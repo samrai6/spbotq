@@ -622,7 +622,8 @@ async def auto_filter(client, msg, spoll=False):
     temp.FILES_IDS[key] = files
     pre = 'filep' if settings['file_secure'] else 'file'
     req = message.from_user.id if message.from_user else 0
-    BUTTONS[key] if settings["button"]:
+    search = BUTTONS.get(key)
+    if settings["button"]:
         btn = [
             [
                 InlineKeyboardButton(
