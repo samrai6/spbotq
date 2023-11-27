@@ -52,7 +52,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply(
-                    caption=f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>",
+                    text=f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>",
                     reply_markup=InlineKeyboardMarkup([[
                         InlineKeyboardButton('📚 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅', url=f"https://t.me/piro_tuts"),
                         InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")]]

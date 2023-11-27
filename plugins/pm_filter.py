@@ -42,7 +42,7 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("𝖫𝗈𝖺𝖽𝗂𝗇𝗀...", show_alert=True)
+        return await query.answer("𝖸𝗈𝗎 𝖺𝗋𝖾 𝗎𝗌𝗂𝗇𝗀 𝗈𝗇𝖾 𝗈𝖿 𝗆𝗒 𝗈𝗅𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝖺𝗀𝖺𝗂𝗇.", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -65,7 +65,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]-{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -624,7 +624,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]-{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
