@@ -116,9 +116,12 @@ async def start(client, message):
                 file_id=file.file_id,
                 caption=f_caption,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url=f"https://t.me/piroxbots") ] ] ),
-            )
-        return
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url=f"https://t.me/piroxbots") ] ] ))
+            ok = await f.reply(DELETE_TXT)
+    await asyncio.sleep(300)
+    await f.delete()
+    await ok.delete()
+    return
         
     files_ = await get_file_details(file_id)           
     if not files_:
