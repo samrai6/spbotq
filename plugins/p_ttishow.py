@@ -35,8 +35,8 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f"https://t.me/raixchat"),
-            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat'),
+            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f'https://t.me/piroxbots')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -51,14 +51,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(
-                    text=f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>",
-                    reply_markup=InlineKeyboardMarkup([[
-                        InlineKeyboardButton('📚 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅', url=f"https://t.me/piro_tuts"),
-                        InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f"https://t.me/piroxbots")]]
-                        ))
-                        await asyncio.sleep(600)
-                        await (temp.MELCOW['welcome']).delete()
+                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>\n\n👉🏻 <a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>")
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -136,22 +129,6 @@ async def re_enable_chat(bot, message):
     await db.re_enable_chat(int(chat_))
     temp.BANNED_CHATS.remove(int(chat_))
     await message.reply("Chat Successfully re-enabled")
-
-@Client.on_message(filters.command('stats'))
-async def stats(bot, update):
-    msg = await message.reply('👀')
-    files = await Media.count_documents()
-    users = await db.total_users_count()
-    chats = await db.total_chat_count()
-    size = await db.get_db_size()
-    free = 5312000000 - size
-    uptime = get_readable_time(time.time() - temp.START_TIME)
-    size = get_size(size)
-    free = get_size(free)
-    await msg.edit(
-    text=script.STATUS_TXT.format(files, users, chats, size, free, uptime),
-    disable_web_page_preview=True
-    )
 
 @Client.on_message(filters.command("status") & filters.user(ADMINS))          
 async def stats(bot, update):

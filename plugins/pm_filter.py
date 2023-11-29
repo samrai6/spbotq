@@ -28,9 +28,9 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
-DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟱 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 
+#DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟱 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 
 
-𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱..."""
+#𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱..."""
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -412,17 +412,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         await query.answer()
-        f = await client.send_cached_media(
+        await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
             reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url="https://t.me/piroxbots") ] ] ))
-        ok = await f.reply(DELETE_TXT)
-        await asyncio.sleep(300)
-        await f.delete()
-        await ok.delete()
-        return
+        #ok = await f.reply(DELETE_TXT)
+        #await asyncio.sleep(300)
+        #await f.delete()
+        #await ok.delete()
+        #return
 
     elif query.data.startswith("killfilesdq"):
         ident, keyword = query.data.split("#")
@@ -557,13 +557,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
         )
-
-    elif query.data.startswith("send_all"):
-        _, req, key, pre = query.data.split("#")
-        if int(req) not in [query.from_user.id, 0]:
-            return await query.answer('𝖸𝗈𝗎 𝖺𝗋𝖾 𝗎𝗌𝗂𝗇𝗀 𝗈𝗇𝖾 𝗈𝖿 𝗆𝗒 𝗈𝗅𝖽 𝗆𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗌𝖾𝗇𝖽 𝗍𝗁𝖾 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝖺𝗀𝖺𝗂𝗇.', show_alert=True)
-        
-        await query.answer(url=f"https://t.me/{temp.U_NAME}?start=all_{key}_{pre}")
 
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
