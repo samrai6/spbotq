@@ -80,7 +80,7 @@ async def addgfilter(client, message):
         parse_mode=enums.ParseMode.MARKDOWN
     )
 
-@Client.on_message(filters.command(['viewgfilters', 'filters']) & filters.incoming & filters.user(ADMINS))
+@Client.on_message(filters.command(['viewfilters', 'filters']) & filters.incoming & filters.user(ADMINS))
 async def get_all_gfilters(client, message):
     texts = await get_gfilters('gfilters')
     count = await count_gfilters('gfilters')
@@ -116,8 +116,8 @@ async def deletegfilter(client, message):
     except:
         await message.reply_text(
             "<i>Mention the gfiltername which you wanna delete!</i>\n\n"
-            "<code>/delg gfiltername</code>\n\n"
-            "Use /viewgfilters to view all available gfilters",
+            "<code>/del gfiltername</code>\n\n"
+            "Use /viewfilters to view all available gfilters",
             quote=True
         )
         return
