@@ -38,7 +38,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
                 creates_join_request=True if REQ_CHANNEL and JOIN_REQS_DB else False
             )).invite_link
             INVITE_LINK = invite_link
-            logger.info("Created Req link")
+            logger.info("Created Req Link")
         else:
             invite_link = INVITE_LINK
 
@@ -93,7 +93,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         else:
             return True
     except UserNotParticipant:
-        text="""**𝖢𝗅𝗂𝖼𝗄 𝖳𝗁𝖾 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗼 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝖠𝗇𝖽 𝖯𝗎𝗍 𝖱𝖾𝗊𝗎𝖾𝗌𝗍,\n 𝖳𝗁𝖾𝗇 𝖧𝗂𝗍 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 ,𝖸𝗈𝗎 𝖶𝗂𝗅𝗅 𝖦𝖾𝗍 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌....😁"""
+        text="""**𝖢𝗅𝗂𝖼𝗄 𝖳𝗁𝖾 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗼 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 𝖠𝗇𝖽 𝖯𝗎𝗍 𝖱𝖾𝗊𝗎𝖾𝗌𝗍,\n𝖳𝗁𝖾𝗇 𝖧𝗂𝗍 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 ,𝖸𝗈𝗎 𝖶𝗂𝗅𝗅 𝖦𝖾𝗍 𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾𝗌....😁\n\n<a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>"""
 
         buttons = [
             [
@@ -113,6 +113,7 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
                 quote=True,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=enums.ParseMode.MARKDOWN,
+                disable_web_page_preview=True,
             )
         return False
 

@@ -109,7 +109,7 @@ async def get_all_gfilters(client, message):
         parse_mode=enums.ParseMode.MARKDOWN
     )
         
-@Client.on_message(filters.command('delg') & filters.incoming & filters.user(ADMINS))
+@Client.on_message(filters.command('del') & filters.incoming & filters.user(ADMINS))
 async def deletegfilter(client, message):
     try:
         cmd, text = message.text.split(" ", 1)
@@ -126,7 +126,7 @@ async def deletegfilter(client, message):
 
     await delete_gfilter(message, query, 'gfilters')
 
-@Client.on_message(filters.command('delallg') & filters.user(ADMINS))
+@Client.on_message(filters.command('delall') & filters.user(ADMINS))
 async def delallgfilters(client, message):
     await message.reply_text(
             f"Do you want to continue??",
