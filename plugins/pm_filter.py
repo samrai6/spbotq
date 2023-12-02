@@ -28,9 +28,6 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
-#DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟱 𝗠𝗶𝗻𝘂𝘁𝗲𝘀. 
-
-#𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱..."""
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -418,11 +415,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
             reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url="https://t.me/piroxbots") ] ] ))
-        #ok = await f.reply(DELETE_TXT)
-        #await asyncio.sleep(300)
-        #await f.delete()
-        #await ok.delete()
-        #return
+
 
     elif query.data.startswith("killfilesdq"):
         ident, keyword = query.data.split("#")
@@ -710,7 +703,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("𝗜 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗲 𝗔𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗥𝗲𝗹𝗮𝘁𝗲𝗱 𝗧𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝗬𝗼𝘂𝗿 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴.!")
+        k = await msg.reply("𝗜 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗥𝗲𝗹𝗮𝘁𝗲𝗱 𝗧𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝗬𝗼𝘂𝗿 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴.!")
         await asyncio.sleep(10)
         await k.delete()
         return
@@ -739,7 +732,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("𝗜 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗲 𝗔𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗥𝗲𝗹𝗮𝘁𝗲𝗱 𝗧𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝗬𝗼𝘂𝗿 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴.!")
+        k = await msg.reply("𝗜 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗥𝗲𝗹𝗮𝘁𝗲𝗱 𝗧𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝗬𝗼𝘂𝗿 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴.!")
         await asyncio.sleep(10)
         await k.delete()
         return
@@ -751,7 +744,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("𝖨 𝖢𝗈𝗎𝗅𝖽𝗇'𝗍 𝖥𝗂𝗇𝖾 𝖠𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝖱𝖾𝗅𝖺𝗍𝖾𝖽 𝖳𝗁𝖺𝗍.!\n𝗗𝗶𝗱 𝗬𝗼𝘂 𝗠𝗲𝗮𝗻 𝗔𝗻𝘆 𝗢𝗳 𝗧𝗵𝗲𝘀𝗲.?",
+    await msg.reply("𝖨 𝖢𝗈𝗎𝗅𝖽𝗇'𝗍 𝖥𝗂𝗇𝖽 𝖠𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝖱𝖾𝗅𝖺𝗍𝖾𝖽 𝖳𝗁𝖺𝗍.\n𝗗𝗶𝗱 𝗬𝗼𝘂 𝗠𝗲𝗮𝗻 𝗔𝗻𝘆 𝗢𝗳 𝗧𝗵𝗲𝘀𝗲.?",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 async def global_filters(client, message, text=False):
