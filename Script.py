@@ -1,5 +1,5 @@
 class script(object):
-    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎</b> 💛
+    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎</b> 🎊
 
 I'm Powerful Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group... 
 
@@ -10,7 +10,7 @@ For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below.
     HELP_TXT = """🔖 𝗛𝗲𝘆 𝗧𝗵𝗲𝗿𝗲 {} ,  
 𝖨𝗍'𝗌 𝖭𝗈𝗍 𝖧𝖺𝗋𝖽 𝖳𝗈 𝖴𝗌𝖾 𝖬𝖾,
 
-𝖢𝗁𝖾𝖼𝗄 𝖬𝗈𝗏𝗂𝖾 𝖭𝖺𝗆𝖾 𝖮𝗇 𝖦𝗈𝗈𝗀𝗅𝖾 & 𝖲𝖾𝗇𝖽 𝖳𝗈 𝖬𝖾.
+𝖢𝗁𝖾𝖼𝗄 𝖬𝗈𝗏𝗂𝖾/𝖲𝖾𝗋𝗂𝖾𝗌 𝖭𝖺𝗆𝖾 𝖮𝗇 𝖦𝗈𝗈𝗀𝗅𝖾 & 𝖲𝖾𝗇𝖽 𝖳𝗈 𝖬𝖾.
 [𝖣𝗈𝗇'𝗍 𝖴𝗌𝖾 𝖠𝗇𝗒 𝖲𝗒𝗆𝖻𝗈𝗅 : ; & 𝖾𝗍𝖼]
 
 📝 𝗡𝗼𝘁𝗲:
@@ -32,8 +32,9 @@ For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below.
     SOURCE_TXT = """𝗡𝗢𝗧𝗘:
 ⚠️ 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍 𝖨𝗌 𝖭𝗈𝗍 𝖠𝗇 𝖮𝗉𝖾𝗇 𝖲𝗈𝗎𝗋𝖼𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍.!
 
-𝖲𝗉𝖾𝖼𝗂𝖺𝗅 𝖳𝗁𝖺𝗇𝗄𝗌 𝗍𝗈 𝖤𝗏𝖺𝖬𝖺𝗋𝗂𝖺 𝖣𝖾𝗏𝗌 𝖥𝗈𝗋 𝖳𝗁𝖾 𝖡𝖺𝗌𝖾 𝖢𝗈𝖽𝖾𝗌.
+𝖳𝗁𝖺𝗇𝗄𝗌 𝗍𝗈 𝖤𝗏𝖺𝖬𝖺𝗋𝗂𝖺 𝖣𝖾𝗏𝗌 𝖥𝗈𝗋 𝖳𝗁𝖾 𝖡𝖺𝗌𝖾 𝖢𝗈𝖽𝖾𝗌.
 
+𝖲𝗉𝖾𝖼𝗂𝖺𝗅 𝖳𝗁𝖺𝗇𝗄𝗌 𝖳𝗈 𝖬𝗒 𝖳𝖦 𝖥𝗋𝗂𝖾𝗇𝖽𝗌 𝖳𝗈𝗈.
 
 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>
 """
@@ -43,7 +44,6 @@ For More Help Check <b>𝗛𝗲𝗹𝗽</b> Button Below.
 👥 𝖳𝗈𝗍𝖺𝗅 𝖢𝗁𝖺𝗍𝗌: <code>{}</code>
 ✨ 𝖴𝗌𝖾𝖽 𝖲𝗍𝗈𝗋𝖺𝗀𝖾: <code>{}</code>
 ⚡️ 𝖥𝗋𝖾𝖾 𝖲𝗍𝗈𝗋𝖺𝗀𝖾: <code>{}</code>
-🚀 𝖴𝗉𝗍𝗂𝗆𝖾: <code>{}</code>
 
 <b>😎 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>"""
 
