@@ -67,7 +67,7 @@ We respect all the copyright laws and works in compliance with DMCA and EUCD.
 
 If anything is against law please contact us so that it can be removed asap.</q>"""
 
-DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟱 𝗠𝗶𝗻𝘂𝘁𝗲𝘀.
+    DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟱 𝗠𝗶𝗻𝘂𝘁𝗲𝘀.
 𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱..."""
 
 #𝗝𝘂𝘀𝘁 𝗦𝗲𝗻𝗱 𝗖𝗼𝗿𝗿𝗲𝗰𝘁 𝗠𝗼𝘃𝗶𝗲/𝗦𝗲𝗿𝗶𝗲𝘀 𝗡𝗮𝗺𝗲 𝗪𝗶𝘁𝗵𝗼𝘂𝘁 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴 𝗠𝗶𝘀𝘁𝗮𝗸𝗲𝘀.

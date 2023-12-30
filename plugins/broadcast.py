@@ -6,13 +6,11 @@ from pyrogram import Client, filters, enums
 from database.users_chats_db import db
 from info import ADMINS
         
-@Client.on_message(filters.command(["bc", "broadcast"]) & filters.user(ADMINS) & filters.reply)
+@Client.on_message(filters.command(["bb", "broadcast"]) & filters.user(ADMINS) & filters.reply)
 async def broadcast(bot, message):
     users = await db.get_all_users()
     b_msg = message.reply_to_message
-    sts = await message.reply_text(
-        text='🚀'
-    )
+    sts = await message.reply_text(text='🚀')
     start_time = time.time()
     total_users = await db.total_users_count()
     done = 0
@@ -43,7 +41,7 @@ async def broadcast(bot, message):
 async def remove_junkuser__db(bot, message):
     users = await db.get_all_users()
     b_msg = message 
-    sts = await message.reply_text('🚀')   
+    sts = await message.reply_text(text='🚀') 
     start_time = time.time()
     total_users = await db.total_users_count()
     blocked = 0
@@ -66,7 +64,7 @@ async def remove_junkuser__db(bot, message):
     await sts.delete()
     await bot.send_message(message.chat.id, f"𝖢𝗈𝗆𝗉𝗅𝖾𝗍𝖾𝖽:\n𝖢𝗈𝗆𝗉𝗅𝖾𝗍𝖾𝖽 𝖨𝗇 {time_taken} 𝖲𝖾𝖼𝗈𝗇𝖽𝗌.\n\n𝖳𝗈𝗍𝖺𝗅 𝖴𝗌𝖾𝗋𝗌 {total_users}\n𝖢𝗈𝗆𝗉𝗅𝖾𝗍𝖾𝖽: {done} / {total_users}\n𝖡𝗅𝗈𝖼𝗄𝖾𝖽: {blocked}\n𝖣𝖾𝗅𝖾𝗍𝖾𝖽: {deleted}")
 
-@Client.on_message(filters.command(["gc", "group_broadcast"]) & filters.user(ADMINS) & filters.reply)
+@Client.on_message(filters.command(["gg", "group_broadcast"]) & filters.user(ADMINS) & filters.reply)
 async def broadcast_group(bot, message):
     groups = await db.get_all_chats()
     b_msg = message.reply_to_message
@@ -103,7 +101,7 @@ async def broadcast_group(bot, message):
         await message.reply_document('reason.txt', caption=f"𝖢𝗈𝗆𝗉𝗅𝖾𝗍𝖾𝖽:\n𝖢𝗈𝗆𝗉𝗅𝖾𝗍𝖾𝖽 𝖨𝗇 {time_taken} 𝖲𝖾𝖼𝗈𝗇𝖽𝗌.\n\n𝖳𝗈𝗍𝖺𝗅 𝖦𝗋𝗈𝗎𝗉𝗌 {total_groups}\n𝖢𝗈𝗆𝗉𝗅𝖾𝗍𝖾𝖽: {done} / {total_groups}\n𝖲𝗎𝖼𝖼𝖾𝗌𝗌: {success}\n𝖣𝖾𝗅𝖾𝗍𝖾𝖽: {deleted}")
         os.remove("reason.txt")
     
-@Client.on_message(filters.command(["gg", "clean_gbroadcast"]) & filters.user(ADMINS))
+@Client.on_message(filters.command(["cg", "clean_gbroadcast"]) & filters.user(ADMINS))
 async def junk_clear_group(bot, message):
     groups = await db.get_all_chats()
     b_msg = message

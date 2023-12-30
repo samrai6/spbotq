@@ -468,8 +468,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start'),
-            InlineKeyboardButton('♻️ Status', callback_data='stats')
+                      InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start'),
+                      InlineKeyboardButton('♻️ Status', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -505,7 +505,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "dmca":
         buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='start')
+            InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='start'),
+            InlineKeyboardButton('👨🏻‍💻 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖠𝖽𝗆𝗂𝗇', url=f"https://t.me/proxsupportrobot")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(

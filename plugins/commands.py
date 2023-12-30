@@ -24,6 +24,8 @@ DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹�
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
+                    InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                ],[
                     InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
@@ -41,6 +43,8 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
+                    InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                ],[
                     InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
@@ -60,6 +64,8 @@ async def start(client, message):
             return
 
         buttons = [[
+                    InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+                ],[
                     InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
@@ -128,11 +134,11 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚡️', url=f"https://t.me/piroxbots") ] ] ))
-        ok = await f.reply(DELETE_TXT)
-        await asyncio.sleep(300)
-        await f.delete()
-        await ok.delete()
-        return
+    ok = await message.reply(DELETE_TXT)
+    await asyncio.sleep(300)
+    await f.delete()
+    await ok.delete()
+    return
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):

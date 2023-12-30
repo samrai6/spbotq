@@ -12,9 +12,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', '10167721'))
-API_HASH = environ.get('API_HASH', '1729b7f028043bf3de86793897395105')
-BOT_TOKEN = environ.get('BOT_TOKEN', '5850407869:AAGEL3TsfA3i3tf7X3gUtZ9WOp3-Ny3e-q4')
+API_ID = int(environ.get('API_ID', 'fdghtrfghd'))
+API_HASH = environ.get('API_HASH', 'dsfgfjjkjk')
+BOT_TOKEN = environ.get('BOT_TOKEN', 'dghhsg:AAHvVzAY9UWeVhgfhfhUeGw6gXMx26gPGCTLhX1E')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -22,26 +22,29 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '761686219 5705117542').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001641612683 -1001614484361 -1001838316522').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001658823824 -1001806297350').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
-#request channel infor
+#request channel info
 auth_channel = environ.get('AUTH_CHANNEL')
-AUTH_CHANNEL = -1002050049881
-REQ_CHANNEL = -1002050049881
-JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://adv:adv@cluster0.txud8.mongodb.net/?retryWrites=true&w=majority')
+AUTH_CHANNEL = -1002145312791
+REQ_CHANNEL = -1002145312791
+JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://dfhg:fdh@cluster0.fdghfdg.mongodb.net/?retryWrites=true&w=majority')
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://adv:adv@cluster0.txud8.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://dfgh:fgh@cluster0.fghdfgh.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001853961538').split()]
-LOG_CHANNEL = -1001831738648
+LOG_CHANNEL = -1002069602616
+LOG_GROUP = -1001792675255
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<code>{file_name}</code>\n\n<code>{file_caption}</code>')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<b>{file_name}</b>\n\n<b>{file_caption}</b>')
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [[𝖯𝖨𝖱𝖮]](t.me/piroxbots)")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
@@ -49,12 +52,6 @@ MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
-
-#Auto approve 
-#In private group or channel must enable request admin approval 
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '').split()]
-TEXT = environ.get("APPROVED_WELCOME_TEXT", "𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾 {mention}\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {title}\n\n𝖸𝗈𝗎𝗋 𝖩𝗈𝗂𝗇 𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖠𝗉𝗉𝗋𝗈𝗏𝖾𝖽.!")
-APPROVED = environ.get("APPROVED_WELCOME", "off").lower()
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
