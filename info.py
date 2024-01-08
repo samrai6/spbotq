@@ -40,7 +40,6 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001853961538').split()]
 LOG_CHANNEL = -1002069602616
-LOG_GROUP = -1001792675255
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)

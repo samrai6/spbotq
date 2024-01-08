@@ -98,7 +98,6 @@ async def answer(bot, query):
                            switch_pm_text=switch_pm_text,
                            switch_pm_parameter="okay")
 
-
 def get_reply_markup(query):
     buttons = [
         [

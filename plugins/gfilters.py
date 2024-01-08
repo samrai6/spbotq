@@ -80,7 +80,7 @@ async def addgfilter(client, message):
         parse_mode=enums.ParseMode.MARKDOWN
     )
 
-@Client.on_message(filters.command(['viewfilters', 'filters']) & filters.incoming & filters.user(ADMINS))
+@Client.on_message(filters.command("filters") & filters.incoming)
 async def get_all_gfilters(client, message):
     texts = await get_gfilters('gfilters')
     count = await count_gfilters('gfilters')
