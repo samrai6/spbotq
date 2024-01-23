@@ -22,24 +22,24 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '761686219 5705117542').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001658823824 -1001806297350').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001960547113').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 #request channel info
 auth_channel = environ.get('AUTH_CHANNEL')
-AUTH_CHANNEL = -1002145312791
-REQ_CHANNEL = -1002145312791
-JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://dfhg:fdh@cluster0.fdghfdg.mongodb.net/?retryWrites=true&w=majority')
+AUTH_CHANNEL = -1001960547113
+REQ_CHANNEL = -1001960547113
+JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://Zx:Zx@cluster0.9jp8ahi.mongodb.net/?retryWrites=true&w=majority')
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://dfgh:fgh@cluster0.fghdfgh.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Zx:Zx@cluster0.9jp8ahi.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001853961538').split()]
-LOG_CHANNEL = -1002069602616
+LOG_CHANNEL = -1001960547113
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
