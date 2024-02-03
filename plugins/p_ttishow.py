@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
 from info import ADMINS, LOG_CHANNEL, MELCOW_NEW_USERS
 from database.users_chats_db import db
-from database.ia_filterdb import Media
+from database.ia_filterdb import Media, db as clientDB
 from utils import get_size, temp, get_settings, get_readable_time
 from Script import script
 from pyrogram.errors import ChatAdminRequired
@@ -267,3 +267,14 @@ async def list_chats(bot, message):
         with open('chats.txt', 'w+') as outfile:
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
+
+@Client.on_message(filters.command('stats') & filters.user(ADMINS))
+async def get_ststs(bot, message):
+    rju = await message.reply('Fetching stats..')
+    total_users = await db.total_users_count()
+    totl_chats = await db.total_chat_count()
+    files = await Media.count_documents()
+    stats = await clientDB.command('dbStats')
+    used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))
+    free_dbSize = 512-used_dbSize
+    await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, round(used_dbSize, 2), round(free_dbSize, 2)))

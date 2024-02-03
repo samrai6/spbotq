@@ -414,12 +414,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ] ] ))
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
         ok = await message.reply(DELETE_TXT)
         await asyncio.sleep(300)
         await f.delete()
         await ok.delete()
-        await message.reply("**𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝖳𝗈 𝖠𝗏𝗈𝗂𝖽 𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖨𝗇𝖿𝗋𝗂𝗇𝗀𝖾𝗆𝖾𝗇𝗍.**\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>")
+        await message.reply("𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.\n\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>", disable_web_page_preview=True)
         return
 
     elif query.data.startswith("killfilesdq"):
@@ -468,8 +468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-                      InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start'),
-                      InlineKeyboardButton('♻️ Status', callback_data='stats')
+                      InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -483,7 +482,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('📍 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾', callback_data='source')
         ],[
             InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start'),
-            InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -511,47 +509,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.DMCA_TXT,
-            reply_markup=reply_markup,
-            disable_web_page_preview=True,
-            parse_mode=enums.ParseMode.HTML
-        )
-    elif query.data == "stats":
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='help'),
-            InlineKeyboardButton('♻️ 𝖱𝖾𝖿𝗋𝖾𝗌𝗁', callback_data='rfrsh')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        files = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
-        size = await db.get_db_size()
-        free = 512000000 - size
-        uptime = get_readable_time(time.time() - temp.START_TIME)
-        size = get_size(size)
-        free = get_size(free)
-        await query.message.edit_text(
-            text=script.STATUS_TXT.format(files, users, chats, size, free, uptime),
-            reply_markup=reply_markup,
-            disable_web_page_preview=True,
-            parse_mode=enums.ParseMode.HTML
-        )
-    elif query.data == "rfrsh":
-        await query.answer("Fetching MongoDb DataBase")
-        buttons = [[
-            InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='help'),
-            InlineKeyboardButton('♻️ 𝖱𝖾𝖿𝗋𝖾𝗌𝗁', callback_data='rfrsh')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        files = await Media.count_documents()
-        users = await db.total_users_count()
-        chats = await db.total_chat_count()
-        size = await db.get_db_size()
-        free = 512000000 - size
-        uptime = get_readable_time(time.time() - temp.START_TIME)
-        size = get_size(size)
-        free = get_size(free)
-        await query.message.edit_text(
-            text=script.STATUS_TXT.format(files, users, chats, size, free, uptime),
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML
