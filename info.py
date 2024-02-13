@@ -30,8 +30,8 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 #request channel infor
 auth_channel = environ.get('AUTH_CHANNEL')
-AUTH_CHANNEL = [int(ach) if id_pattern.search(ach) else ach for ach in environ.get('AUTH_CHANNEL', '').split()]
-REQ_CHANNEL = [int(rch) if id_pattern.search(rch) else rch for rch in environ.get('AUTH_CHANNEL', '').split()]
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', 0))
+REQ_CHANNEL = int(environ.get('REQ_CHANNEL', 0))
 JOIN_REQS_DB = environ.get('JOIN_REQS_DB', '')
 
 # MongoDB information
