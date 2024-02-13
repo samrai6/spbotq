@@ -16,9 +16,13 @@ from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
+from aiohttp import web
+from plugins import web_server
 import time, os
 from datetime import datetime
 from pytz import timezone
+
+PORT = "8080"
 
 class Bot(Client):
 
@@ -41,15 +45,18 @@ class Bot(Client):
         await super().start()
         await Media.ensure_indexes()
         me = await self.get_me()
-        temp.BOT = self
         temp.ME = me.id
         temp.U_NAME = me.username
         temp.B_NAME = me.first_name
         self.username = '@' + me.username
-        logging.info(f"{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 @{me.username}.")
-        logging.info(LOG_STR)
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
+        logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         await self.send_message(chat_id=LOG_CHANNEL, text=f"{me.first_name} 𝖶𝗂𝗍𝗁 𝖥𝗈𝗋 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 v{__version__} (Layer {layer}) 𝖲𝗍𝖺𝗋𝗍𝖾𝖽 𝖮𝗇 @{me.username}")
-        
+        logging.info(LOG_STR)
+            
     async def stop(self, *args):
         await super().stop()
         logging.info("Bot stopped. Bye.")
@@ -92,7 +99,6 @@ class Bot(Client):
             for message in messages:
                 yield message
                 current += 1
-
 
 app = Bot()
 app.run()

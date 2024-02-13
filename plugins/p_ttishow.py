@@ -51,7 +51,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>\n\n👉🏻 <a href='https://t.me/piro_tuts'>𝗧𝘂𝘁𝗼𝗿𝗶𝗮𝗹 𝗩𝗶𝗱𝗲𝗼</a>")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗅𝗅𝗈 𝖳𝗁𝖾𝗋𝖾, {u.mention}🎊,\n𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝖳𝗈 {message.chat.title}</b>")
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
@@ -152,7 +152,7 @@ async def stats(bot, update):
 
 <b>😎 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>"""
 
-    msg = await bot.send_message(chat_id=update.chat.id, text="👀", parse_mode=enums.ParseMode.MARKDOWN)         
+    msg = await bot.send_message(chat_id=update.chat.id, text="👀", parse_mode=enums.ParseMode.MARKDOWN, quote=True)         
     await msg.edit_text(text=ms_g, parse_mode=enums.ParseMode.HTML,disable_web_page_preview=True)
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
@@ -270,7 +270,7 @@ async def list_chats(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.user(ADMINS))
 async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
+    rju = await message.reply('👀')
     total_users = await db.total_users_count()
     totl_chats = await db.total_chat_count()
     files = await Media.count_documents()
@@ -278,3 +278,46 @@ async def get_ststs(bot, message):
     used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))
     free_dbSize = 512-used_dbSize
     await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, round(used_dbSize, 2), round(free_dbSize, 2)))
+
+@Client.on_message(filters.command('tutorial'))
+async def tutorial(client, message):
+    await message.reply_video(
+        video="https://graph.org/file/a9f37d2c26de7f9b74ecc.mp4",
+        caption="**𝖶𝖺𝗍𝖼𝗁 𝖳𝗁𝗂𝗌 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅 𝖵𝗂𝖽𝖾𝗈 & 𝖦𝖾𝗍 𝖲𝗍𝖺𝗋𝗍𝖾𝖽!\n\n🚀 𝖬𝖺𝖽𝖾 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>**",
+        reply_markup=InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29")
+        ],[
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+        ]]
+        ),
+        quote=True)
+
+@Client.on_message(filters.command('help'))
+async def help(client, message):
+    await message.reply_text(
+        text=script.HELP_TXT.format(message.from_user.mention),
+        parse_mode=enums.ParseMode.HTML,
+        reply_markup=InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29")
+        ],[
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+        ]]
+        ),
+        quote=True)
+
+@Client.on_message(filters.command('about'))
+async def about(client, message):
+    await message.reply_text(
+        text=script.ABOUT_TXT.format(message.from_user.mention),
+        parse_mode=enums.ParseMode.HTML,
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+        [[
+            InlineKeyboardButton('🚀 𝖯𝖨𝖱𝖮 𝖡𝖮𝖳𝖲 🚀', url=f"https://t.me/piroxbots")
+        ],[
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+        ]]
+        ),
+        quote=True)

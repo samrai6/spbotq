@@ -28,6 +28,11 @@ logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
 SPELL_CHECK = {}
+DELETE_TXT = """‼️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ‼️
+
+⚠️ 𝙁𝙞𝙡𝙚 𝙒𝙞𝙡𝙡 𝘽𝙚 𝘿𝙚𝙡𝙚𝙩𝙚𝙙 𝙄𝙣 𝟱 𝙈𝙞𝙣𝙪𝙩𝙚𝙨.
+
+𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱..."""
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -454,7 +459,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
                     InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
                 ],[
-                    InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
@@ -466,16 +470,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
         await query.answer('Piracy Is Crime')
-    elif query.data == "help":
-        buttons = [[
-                      InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.HELP_TXT.format(query.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉', url=f"https://t.me/raixchat"),
@@ -673,9 +667,17 @@ async def advantage_spell_chok(msg):
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
+    btn = [[
+                InlineKeyboardButton("🔎 𝖦𝖮𝖮𝖦𝖫𝖤", url=f"https://www.google.com/")
+            ],
+            [
+            InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29"),
+            InlineKeyboardButton('👥 𝖲𝖴𝖯𝖯𝖮𝖱𝖳 𝖦𝖱𝖮𝖴𝖯 💭', url=f"https://t.me/raixchat")
+            ]]
     if not g_s:
-        k = await msg.reply("𝗜 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗥𝗲𝗹𝗮𝘁𝗲𝗱 𝗧𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝗬𝗼𝘂𝗿 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴.!")
-        await asyncio.sleep(10)
+        k = await msg.reply(text=script.SPELL_TEXT.format(msg.from_user.mention), 
+        reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(60)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -703,20 +705,21 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("𝗜 𝗖𝗼𝘂𝗹𝗱𝗻'𝘁 𝗙𝗶𝗻𝗱 𝗔𝗻𝘆𝘁𝗵𝗶𝗻𝗴 𝗥𝗲𝗹𝗮𝘁𝗲𝗱 𝗧𝗵𝗮𝘁. 𝗖𝗵𝗲𝗰𝗸 𝗬𝗼𝘂𝗿 𝗦𝗽𝗲𝗹𝗹𝗶𝗻𝗴.!")
-        await asyncio.sleep(10)
+        k = await msg.reply(text=script.SPELL_TEXT.format(msg.from_user.mention), 
+        reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(60)
         await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
-        InlineKeyboardButton(
-            text=movie.strip(),
-            callback_data=f"spolling#{user}#{k}",
-        )
-    ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("𝖨 𝖢𝗈𝗎𝗅𝖽𝗇'𝗍 𝖥𝗂𝗇𝖽 𝖠𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝖱𝖾𝗅𝖺𝗍𝖾𝖽 𝖳𝗁𝖺𝗍.\n𝗗𝗶𝗱 𝗬𝗼𝘂 𝗠𝗲𝗮𝗻 𝗔𝗻𝘆 𝗢𝗳 𝗧𝗵𝗲𝘀𝗲.?",
-                    reply_markup=InlineKeyboardMarkup(btn))
+                InlineKeyboardButton("🔎 𝖦𝖮𝖮𝖦𝖫𝖤", url=f"https://www.google.com/")
+            ],
+            [
+            InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29"),
+            InlineKeyboardButton('👥 𝖲𝖴𝖯𝖯𝖮𝖱𝖳 𝖦𝖱𝖮𝖴𝖯 💭', url=f"https://t.me/raixchat")
+            ]]
+    await msg.reply(text=script.SPELL_TEXT.format(msg.from_user.mention), 
+        reply_markup=InlineKeyboardMarkup(btn))
 
 async def global_filters(client, message, text=False):
     group_id = message.chat.id

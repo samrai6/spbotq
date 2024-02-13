@@ -23,7 +23,7 @@ async def join_reqs(client, join_req: ChatJoinRequest):
             date=date
         )
 
-@Client.on_message(filters.command("tr") & filters.user((ADMINS.copy() + [1125210189])))
+@Client.on_message(filters.command("totalr") & filters.user((ADMINS.copy() + [1125210189])))
 async def total_requests(client, message):
 
     if db().isActive():
@@ -34,7 +34,7 @@ async def total_requests(client, message):
             disable_web_page_preview=True
         )
 
-@Client.on_message(filters.command("pr") & filters.user(ADMINS))
+@Client.on_message(filters.command("purger") & filters.user(ADMINS))
 async def purge_requests(client, message):
     
     if db().isActive():
@@ -44,5 +44,3 @@ async def purge_requests(client, message):
             parse_mode=enums.ParseMode.MARKDOWN,
             disable_web_page_preview=True
         )
-
-

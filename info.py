@@ -12,34 +12,36 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', 'fdghtrfghd'))
-API_HASH = environ.get('API_HASH', 'dsfgfjjkjk')
-BOT_TOKEN = environ.get('BOT_TOKEN', 'dghhsg:AAHvVzAY9UWeVhgfhfhUeGw6gXMx26gPGCTLhX1E')
+API_ID = int(environ.get('API_ID', ''))
+API_HASH = environ.get('API_HASH', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
+JOIN_CHANNELS = [int(-1001828144363), int(-1002106678475), int(-1002013463154), int(-1002008766585), int(-1001671558650), int(-1001500383895)]
+
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1815282501').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001960547113').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '761686219 5705117542 6625690100').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001641612683 -1001614484361 -1001838316522 -1001767342018').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
-#request channel info
+#request channel infor
 auth_channel = environ.get('AUTH_CHANNEL')
-AUTH_CHANNEL = -1001960547113
-REQ_CHANNEL = -1001960547113
-JOIN_REQS_DB = environ.get('JOIN_REQS_DB', 'mongodb+srv://Zx:Zx@cluster0.9jp8ahi.mongodb.net/?retryWrites=true&w=majority')
+AUTH_CHANNEL = [int(ach) if id_pattern.search(ach) else ach for ach in environ.get('AUTH_CHANNEL', '').split()]
+REQ_CHANNEL = [int(rch) if id_pattern.search(rch) else rch for rch in environ.get('AUTH_CHANNEL', '').split()]
+JOIN_REQS_DB = environ.get('JOIN_REQS_DB', '')
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Zx:Zx@cluster0.9jp8ahi.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "PIRO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'FILES')
 
 # Others
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001853961538').split()]
-LOG_CHANNEL = -1001960547113
+LOG_CHANNEL = -1002069602616
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)

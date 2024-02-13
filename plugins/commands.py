@@ -17,7 +17,10 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-DELETE_TXT = """⚠️ 𝗙𝗶𝗹𝗲 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟱 𝗠𝗶𝗻𝘂𝘁𝗲𝘀.
+DELETE_TXT = """‼️ 𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧 ‼️
+
+⚠️ 𝙁𝙞𝙡𝙚 𝙒𝙞𝙡𝙡 𝘽𝙚 𝘿𝙚𝙡𝙚𝙩𝙚𝙙 𝙄𝙣 𝟱 𝙈𝙞𝙣𝙪𝙩𝙚𝙨.
+
 𝗜𝗳 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗱𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲, 𝗞𝗶𝗻𝗱𝗹𝘆 𝗙𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗶𝘀 𝗳𝗶𝗹𝗲 𝘁𝗼 𝗮𝗻𝘆 𝗰𝗵𝗮𝘁 (𝘀𝗮𝘃𝗲𝗱) 𝗮𝗻𝗱 𝘀𝘁𝗮𝗿𝘁 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱..."""
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -26,7 +29,6 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
                 ],[
-                    InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
@@ -45,7 +47,6 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
                 ],[
-                    InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
@@ -66,7 +67,6 @@ async def start(client, message):
         buttons = [[
                     InlineKeyboardButton('➕ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ➕', url=f"http://t.me/{temp.U_NAME}?startgroup=true")
                 ],[
-                    InlineKeyboardButton('ℹ️ 𝖧𝖾𝗅𝗉', callback_data='help'),
                     InlineKeyboardButton('‼️ 𝖣𝖬𝖢𝖠', callback_data='dmca'),
                     InlineKeyboardButton('😊 𝖠𝖻𝗈𝗎𝗍', callback_data='about')
                   ]]
@@ -101,7 +101,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ] ] ))
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
             filetype = msg.media
             file = getattr(msg, filetype)
             title = file.file_name
@@ -133,12 +133,12 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ⚡️', url=f"https://t.me/blasterindex") ] ] ))
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
     ok = await message.reply(DELETE_TXT)
     await asyncio.sleep(300)
     await f.delete()
     await ok.delete()
-    await message.reply("**𝖸𝗈𝗎𝗋 𝖥𝗂𝗅𝖾 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖣𝖾𝗅𝖾𝗍𝖾𝖽 𝖳𝗈 𝖠𝗏𝗈𝗂𝖽 𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖨𝗇𝖿𝗋𝗂𝗇𝗀𝖾𝗆𝖾𝗇𝗍.**\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>")
+    await message.reply("𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.\n\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>", disable_web_page_preview=True)
     return
 
 @Client.on_message(filters.command('logs') & filters.user(ADMINS))
@@ -169,7 +169,6 @@ async def delete_all_index(bot, message):
         ),
         quote=True,
     )
-
 
 @Client.on_callback_query(filters.regex(r'^autofilter_delete'))
 async def delete_all_index_confirm(bot, message):
