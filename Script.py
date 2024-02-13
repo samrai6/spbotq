@@ -1,14 +1,12 @@
 class script(object):
-    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎🎊
-I'm Powerful Auto-Filter Bot You Can Use Me As A Auto-filter in Your Group... 
+    START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎 🎊
 
 𝖧𝗂𝗍 /joinchannels 𝖥𝗈𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌.
 
 𝖧𝖾𝗋𝖾 𝖸𝗈𝗎 𝖢𝖺𝗇 𝖦𝖾𝗍 𝖬𝗈𝗏𝗂𝖾/𝖲𝖾𝗋𝗂𝖾𝗌 𝖨𝗇𝗌𝗂𝖽𝖾 𝖳𝗁𝖾 𝖡𝗈𝗍,
 𝖩𝗎𝗌𝗍 𝖲𝖾𝗇𝖽 𝖬𝗈𝗏𝗂𝖾/𝖲𝖾𝗋𝗂𝖾𝗌 𝖭𝖺𝗆𝖾 𝖶𝗂𝗍𝗁 𝖯𝗋𝗈𝗉𝖾𝗋 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀..!!
 
-𝖧𝗂𝗍 /help 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾 𝖦𝗎𝗂𝖽𝖺𝗇𝖼𝖾.</b>
-"""
+𝖧𝗂𝗍 /help 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾 𝖦𝗎𝗂𝖽𝖺𝗇𝖼𝖾.</b>"""
 
     HELP_TXT = """<b>🔖 𝖸𝗈 {} ,  
 
