@@ -20,7 +20,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', '')
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 JOIN_CHANNELS = [int(-1001828144363), int(-1002106678475), int(-1002013463154), int(-1002008766585), int(-1001671558650), int(-1001500383895)]
-
+PIRO_CHANNELS = [int(-1001658823824)]
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '761686219 5705117542 6625690100').split()]
