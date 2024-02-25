@@ -44,8 +44,6 @@ class script(object):
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a>
-
-𝖡𝗈𝗍 𝖱𝖾𝗉𝗈 𝖬𝖺𝖽𝖾 𝖡𝗒 <a href='https://t.me/piroxtg'>[𝖯𝖨𝖱𝖮]</a>
 </b>"""
 
     SOURCE_TXT = """<b>𝗡𝗢𝗧𝗘:
