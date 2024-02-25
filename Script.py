@@ -1,8 +1,6 @@
 class script(object):
     START_TXT = """<b>𝖸𝗈 {}, 𝖭𝗂𝖼𝖾 𝖳𝗈 𝖬𝖾𝖾𝗍 𝖸𝗈𝗎 🎊
 
-𝖧𝗂𝗍 /joinchannels 𝖥𝗈𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌.
-
 𝖧𝖾𝗋𝖾 𝖸𝗈𝗎 𝖢𝖺𝗇 𝖦𝖾𝗍 𝖬𝗈𝗏𝗂𝖾/𝖲𝖾𝗋𝗂𝖾𝗌 𝖨𝗇𝗌𝗂𝖽𝖾 𝖳𝗁𝖾 𝖡𝗈𝗍,
 𝖩𝗎𝗌𝗍 𝖲𝖾𝗇𝖽 𝖬𝗈𝗏𝗂𝖾/𝖲𝖾𝗋𝗂𝖾𝗌 𝖭𝖺𝗆𝖾 𝖶𝗂𝗍𝗁 𝖯𝗋𝗈𝗉𝖾𝗋 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀..!!
 
@@ -42,16 +40,18 @@ class script(object):
 </b>"""
 
     ABOUT_TXT = """<b>
-○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>
+○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/bjoookg6jkil7'>[𝖲𝖪 𝖡𝖮𝖳𝖲]</a>
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://cloud.google.com/learn/what-is-a-virtual-private-server'>VPS</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a>
-○ 𝖫𝖺𝗌𝗍 𝖴𝗉𝖽𝖺𝗍𝖾 : 5𝗍𝗁 𝖥𝖾𝖻𝗋𝗎𝖺𝗋𝗒 2024</b>"""
+
+𝖡𝗈𝗍 𝖱𝖾𝗉𝗈 𝖬𝖺𝖽𝖾 𝖡𝗒 <a href='https://t.me/piroxtg'>[𝖯𝖨𝖱𝖮]</a>
+</b>"""
 
     SOURCE_TXT = """<b>𝗡𝗢𝗧𝗘:
 ⚠️ 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍 𝖨𝗌 𝖭𝗈𝗍 𝖠𝗇 𝖮𝗉𝖾𝗇 𝖲𝗈𝗎𝗋𝖼𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍.!
 
-𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a></b>
+𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝖽 𝖡𝗒 <a href='https://t.me/piroxtg'>[𝖯𝖨𝖱𝖮]</a></b>
 """
 
     STATUS_TXT = """🗂 𝖳𝗈𝗍𝖺𝗅 𝖥𝗂𝗅𝖾𝗌: <code>{}</code>

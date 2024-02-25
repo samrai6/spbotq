@@ -419,12 +419,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚡', url=f"https://t.me/bjoookg6jkil7")] ] ))
         ok = await message.reply(DELETE_TXT)
         await asyncio.sleep(300)
         await f.delete()
         await ok.delete()
-        await message.reply("𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.\n\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>", disable_web_page_preview=True)
+        await message.reply("𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.", disable_web_page_preview=True)
         return
 
     elif query.data.startswith("killfilesdq"):
@@ -472,7 +472,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉', url=f"https://t.me/raixchat"),
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉', url=f"https://t.me/jrjkridiifkdoodldyu"),
             InlineKeyboardButton('📍 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾', callback_data='source')
         ],[
             InlineKeyboardButton('🏘 𝖧𝗈𝗆𝖾', callback_data='start'),
@@ -498,7 +498,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "dmca":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 𝖡𝖺𝖼𝗄', callback_data='start'),
-            InlineKeyboardButton('👨🏻‍💻 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖠𝖽𝗆𝗂𝗇', url=f"https://t.me/proxsupportrobot")
+            InlineKeyboardButton('👨🏻‍💻 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖠𝖽𝗆𝗂𝗇', url=f"https://t.me/jrjkridiifkdoodldyu")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -667,17 +667,9 @@ async def advantage_spell_chok(msg):
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
-    btn = [[
-                InlineKeyboardButton("🔎 𝖦𝖮𝖮𝖦𝖫𝖤", url=f"https://www.google.com/")
-            ],
-            [
-            InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29"),
-            InlineKeyboardButton('👥 𝖲𝖴𝖯𝖯𝖮𝖱𝖳 𝖦𝖱𝖮𝖴𝖯 💭', url=f"https://t.me/raixchat")
-            ]]
     if not g_s:
-        k = await msg.reply(text=script.SPELL_TEXT.format(msg.from_user.mention), 
-        reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(60)
+        k = await msg.reply("I couldn't find any movie in that name.")
+        await asyncio.sleep(8)
         await k.delete()
         return
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
@@ -705,21 +697,20 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply(text=script.SPELL_TEXT.format(msg.from_user.mention), 
-        reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(60)
+        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        await asyncio.sleep(8)
         await k.delete()
         return
     SPELL_CHECK[msg.id] = movielist
     btn = [[
-                InlineKeyboardButton("🔎 𝖦𝖮𝖮𝖦𝖫𝖤", url=f"https://www.google.com/")
-            ],
-            [
-            InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29"),
-            InlineKeyboardButton('👥 𝖲𝖴𝖯𝖯𝖮𝖱𝖳 𝖦𝖱𝖮𝖴𝖯 💭', url=f"https://t.me/raixchat")
-            ]]
-    await msg.reply(text=script.SPELL_TEXT.format(msg.from_user.mention), 
-        reply_markup=InlineKeyboardMarkup(btn))
+        InlineKeyboardButton(
+            text=movie.strip(),
+            callback_data=f"spolling#{user}#{k}",
+        )
+    ] for k, movie in enumerate(movielist)]
+    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
+    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+                    reply_markup=InlineKeyboardMarkup(btn))
 
 async def global_filters(client, message, text=False):
     group_id = message.chat.id

@@ -101,7 +101,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚡', url=f"https://t.me/bjoookg6jkil7")] ] ))
             filetype = msg.media
             file = getattr(msg, filetype)
             title = file.file_name
@@ -133,12 +133,12 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️', url=f"https://t.me/blasterindex"), InlineKeyboardButton('⚡️ 𝗣𝗜𝗥𝗢 𝗨𝗣𝗗𝗔𝗧𝗘𝗦 ⚡️', url=f"https://t.me/piroxbots")] ] ))
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚡', url=f"https://t.me/bjoookg6jkil7")] ] ))
     ok = await message.reply(DELETE_TXT)
     await asyncio.sleep(300)
     await f.delete()
     await ok.delete()
-    await message.reply("𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.\n\n𝖢𝗁𝖾𝖼𝗄𝗈𝗎𝗍 <a href='https://t.me/blasterindex'>☃️ 𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗜𝗡𝗗𝗘𝗫 ☃️</a>", disable_web_page_preview=True)
+    await message.reply("𝗬𝗼𝘂𝗿 𝗙𝗶𝗹𝗲 𝗛𝗮𝘃𝗲 𝗕𝗲𝗲𝗻 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗧𝗼 𝗔𝘃𝗼𝗶𝗱 𝗖𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗜𝗻𝗳𝗿𝗶𝗻𝗴𝗲𝗺𝗲𝗻𝘁.", disable_web_page_preview=True)
     return
 
 @Client.on_message(filters.command('logs') & filters.user(ADMINS))

@@ -21,7 +21,7 @@ async def save_group(bot, message):
             await db.add_chat(message.chat.id, message.chat.title)
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
-            buttons = [[InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')]]
+            buttons = [[InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/jrjkridiifkdoodldyu')]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
                 text='𝗧𝗵𝗶𝘀 𝗖𝗵𝗮𝘁 𝗜𝘀 𝗡𝗼𝘁 𝗔𝗹𝗹𝗼𝘄𝗱𝗲𝗱.!\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖬𝗒 𝖬𝖺𝗌𝗍𝖾𝗋.',
@@ -35,8 +35,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat'),
-            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f'https://t.me/piroxbots')
+            InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url=f'https://t.me/bjoookg6jkil7')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -63,7 +62,7 @@ async def leave_a_chat(bot, message):
     except:
         chat = chat
     try:
-        buttons = [[InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')]]
+        buttons = [[InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/jrjkridiifkdoodldyu')]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
@@ -101,7 +100,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/raixchat')
+            InlineKeyboardButton('🧬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍', url=f'https://t.me/jrjkridiifkdoodldyu')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -149,8 +148,7 @@ async def stats(bot, update):
 🗂 𝖳𝗈𝗍𝖺𝗅 𝖣𝗂𝗌𝗄 𝖲𝗉𝖺𝖼𝖾: <code>{total}</code>
 🗳 𝖴𝗌𝖾𝖽 𝖲𝗉𝖺𝖼𝖾: <code>{used} ({disk_usage}%)</code>
 📝 𝖥𝗋𝖾𝖾 𝖲𝗉𝖺𝖼𝖾: <code>{free}</code>
-
-<b>😎 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖻𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>"""
+"""
 
     msg = await bot.send_message(chat_id=update.chat.id, text="👀", parse_mode=enums.ParseMode.MARKDOWN, quote=True)         
     await msg.edit_text(text=ms_g, parse_mode=enums.ParseMode.HTML,disable_web_page_preview=True)
@@ -283,12 +281,12 @@ async def get_ststs(bot, message):
 async def tutorial(client, message):
     await message.reply_video(
         video="https://graph.org/file/a9f37d2c26de7f9b74ecc.mp4",
-        caption="**𝖶𝖺𝗍𝖼𝗁 𝖳𝗁𝗂𝗌 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅 𝖵𝗂𝖽𝖾𝗈 & 𝖦𝖾𝗍 𝖲𝗍𝖺𝗋𝗍𝖾𝖽!\n\n🚀 𝖬𝖺𝖽𝖾 𝖡𝗒 <a href='https://t.me/piroxbots'>[𝖯𝖨𝖱𝖮]</a>**",
+        caption="**𝖶𝖺𝗍𝖼𝗁 𝖳𝗁𝗂𝗌 𝖳𝗎𝗍𝗈𝗋𝗂𝖺𝗅 𝖵𝗂𝖽𝖾𝗈 & 𝖦𝖾𝗍 𝖲𝗍𝖺𝗋𝗍𝖾𝖽!**",
         reply_markup=InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29")
         ],[
-            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/jrjkridiifkdoodldyu")
         ]]
         ),
         quote=True)
@@ -302,7 +300,7 @@ async def help(client, message):
         [[
             InlineKeyboardButton('📚 𝖱𝖤𝖰𝖴𝖤𝖲𝖳 𝖦𝖴𝖨𝖣𝖤 📚', url=f"https://graph.org/%F0%9D%97%A0%F0%9D%97%BC%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2--%F0%9D%97%A6%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%80-%F0%9D%97%A5%F0%9D%97%B2%F0%9D%97%BE%F0%9D%98%82%F0%9D%97%B2%F0%9D%98%80%F0%9D%98%81-%F0%9D%97%9A%F0%9D%98%82%F0%9D%97%B6%F0%9D%97%B1%F0%9D%97%B2-11-29")
         ],[
-            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/jrjkridiifkdoodldyu")
         ]]
         ),
         quote=True)
@@ -315,9 +313,7 @@ async def about(client, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
         [[
-            InlineKeyboardButton('🚀 𝖯𝖨𝖱𝖮 𝖡𝖮𝖳𝖲 🚀', url=f"https://t.me/piroxbots")
-        ],[
-            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/raixchat")
+            InlineKeyboardButton('👥 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉 💭', url=f"https://t.me/jrjkridiifkdoodldyu")
         ]]
         ),
         quote=True)
