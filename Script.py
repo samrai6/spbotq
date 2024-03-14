@@ -40,7 +40,7 @@ class script(object):
 </b>"""
 
     ABOUT_TXT = """<b>
-○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/bjoookg6jkil7'>[𝖲𝖪 𝖡𝖮𝖳𝖲]</a>
+○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/SKR_updates'>[𝖲𝖪 𝖡𝖮𝖳𝖲]</a>
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : <a href='https://www.python.org/downloads/release/python-3106/'>𝖯𝗒𝗍𝗁𝗈𝗇 𝟥</a>
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : <a href='https://www.koyeb.com/'>𝖪𝗈𝗒𝖾𝖻</a>
 ○ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 : <a href='https://www.mongodb.com'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡 𝖥𝗋𝖾𝖾 𝖳𝗂𝖾𝗋</a>

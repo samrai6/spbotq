@@ -419,7 +419,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚡', url=f"https://t.me/bjoookg6jkil7")] ] ))
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡𝖴𝗉𝖽𝖺𝗍𝖾𝗌 ⚡', url=f"https://t.me/SKR_updates")] ] ))
         ok = await message.reply(DELETE_TXT)
         await asyncio.sleep(300)
         await f.delete()
