@@ -28,7 +28,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 #request channel infor
 auth_channel = environ.get('AUTH_CHANNEL')
-AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', 0))
+AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL'-1002907277634')
 REQ_CHANNEL = int(environ.get('REQ_CHANNEL', 0))
 JOIN_REQS_DB = environ.get('JOIN_REQS_DB', '')
 
